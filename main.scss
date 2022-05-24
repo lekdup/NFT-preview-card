@@ -1,0 +1,119 @@
+$color-softblue: hsl(215, 51%, 70%);
+$color-cyan: hsl(178, 100%, 50%);
+$color-darkbluemainbg: hsl(217, 54%, 11%);
+$color-darkbluecardbg: hsl(216, 50%, 16%);
+$color-darkblueline: hsl(215, 32%, 27%);
+$color-white: #FFF;
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 1440px;
+    height: 900px;
+    background-color: $color-darkbluemainbg;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: $color-softblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.element {
+    width: 375px;
+    height: 620px;
+    background-color: $color-darkbluecardbg;
+    border-radius: 1rem;
+    padding: 1.7rem;
+    &__image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 320px;
+        & img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-cyan, .5);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s;
+        border-radius: 1rem;
+        & img{
+            width: 50px;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+    & h1 {
+        font-size: 24px;
+        color: $color-white;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        &:hover {
+            cursor: pointer;
+            color: $color-cyan;
+        }
+    }
+    &__items {
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+        border-bottom: 2px solid $color-darkblueline;
+        &-logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            & .little-logo{
+                display: flex;
+                align-items: center;
+            }
+            &--cyan {
+                color: $color-cyan;
+            }
+        }
+    }
+    &__footer{
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        & span{
+            color: $color-white;
+            &:hover {
+                cursor: pointer;
+                color: $color-cyan;
+            }
+        }
+        &-image{
+            width: 40px;
+            height: 40px;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            margin-right: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
