@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./main.scss:./style.css",
-    "prefix": "postcss ./style.css --use autoprefixer -d ./"
+    "sass": "sass --watch ./SCSS/main.scss:./CSS/style.css",
+    "prefix": "postcss ./CSS/style.css --use autoprefixer -d ./CSS"
   },
   "author": "",
   "license": "ISC"
