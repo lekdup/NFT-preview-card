@@ -5,41 +5,29 @@
 }
 
 body {
-  width: 1440px;
-  height: 900px;
+  max-width: 1440px;
+  min-height: 100vh;
   background-color: #0d192b;
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   color: #8bacda;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .element {
-  width: 375px;
-  height: 620px;
+  width: 260px;
+  height: 450px;
   background-color: #14253d;
-  border-radius: 1rem;
-  padding: 1.7rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 .element__image {
   position: relative;
-  display: block;
-  width: 100%;
-  height: 320px;
 }
 .element__image img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .element__overlay {
   position: absolute;
@@ -53,7 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .element__overlay img {
   width: 50px;
@@ -63,29 +51,45 @@ body {
   opacity: 1;
 }
 .element h1 {
-  font-size: 24px;
+  font-size: 18px;
   color: #FFF;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 .element h1:hover {
   cursor: pointer;
   color: #00fff7;
 }
+.element > p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 1rem;
+}
 .element__items {
   display: flex;
-  height: 60px;
+  padding-bottom: 1rem;
   justify-content: space-between;
-  border-bottom: 2px solid #2f415b;
+  border-bottom: 1px solid #2f415b;
+  margin-top: 1rem;
+}
+.element__items p {
+  font-size: 12px;
+  font-weight: 300;
 }
 .element__items-logo {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
 }
 .element__items-logo .little-logo {
+  width: 14px;
+  height: 14px;
   display: flex;
   align-items: center;
+}
+.element__items-logo .little-logo img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
 }
 .element__items-logo--cyan {
   color: #00fff7;
@@ -93,18 +97,23 @@ body {
 .element__footer {
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+}
+.element__footer p {
+  font-size: 12px;
+  font-weight: 300;
 }
 .element__footer span {
   color: #FFF;
+  font-weight: 400;
 }
 .element__footer span:hover {
   cursor: pointer;
   color: #00fff7;
 }
 .element__footer-image {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #FFF;
   border-radius: 50%;
   margin-right: 10px;
